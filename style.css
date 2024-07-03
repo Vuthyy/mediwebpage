@@ -614,7 +614,31 @@ header .head-bottom .head-bottom-left ul li .active {
   border: 1px solid #e5e7eb;
   border-radius: 6px;
   background-color: #ffffff;
+  position: relative;
   /* box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); */
+}
+
+.blog .blog-content .blog-card .date {
+  position: absolute;
+  top: 263px;
+  left: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  text-align: center;
+  padding: 15px;
+}
+
+.blog .blog-content .blog-card .date .day {
+  font-size: 20px;
+  color: #1a1a1a;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.blog .blog-content .blog-card .date .month {
+  font-size: 12px;
+  font-weight: 500;
+  color: #808080;
 }
 
 .blog .blog-content .blog-card img {
