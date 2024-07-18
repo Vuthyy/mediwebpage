@@ -1,0 +1,84 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "discount": "Sale 50%",
+      "imgSrc": "images/product01.png",
+      "category": "HealthCare",
+      "productName": "Sarasoft AG",
+      "currentPrice": "$14.99",
+      "oldPrice": "$20.99",
+      "rating": 4
+    },
+    {
+      "id": "2",
+      "discount": "",
+      "imgSrc": "images/product01.png",
+      "category": "Fitness",
+      "productName": "FitTech Pro",
+      "currentPrice": "$29.99",
+      "oldPrice": "$39.99",
+      "rating": 3
+    },
+    {
+      "id": "3",
+      "discount": "",
+      "imgSrc": "images/product01.png",
+      "category": "Nutrition",
+      "productName": "NutriBoost",
+      "currentPrice": "$19.99",
+      "oldPrice": "$24.99",
+      "rating": 4
+    },
+    {
+      "id": "4",
+      "discount": "Sale 20%",
+      "imgSrc": "images/product01.png",
+      "category": "Wellness",
+      "productName": "ZenRelax",
+      "currentPrice": "$12.99",
+      "oldPrice": "$16.99",
+      "rating": 4
+    },
+    {
+      "id": "5",
+      "discount": "",
+      "imgSrc": "images/product01.png",
+      "category": "HealthCare",
+      "productName": "MediSafe",
+      "currentPrice": "$9.99",
+      "oldPrice": "$14.99",
+      "rating": 3
+    },
+    {
+      "id": "6",
+      "discount": "Sale 30%",
+      "imgSrc": "images/product01.png",
+      "category": "Fitness",
+      "productName": "PowerLift",
+      "currentPrice": "$49.99",
+      "oldPrice": "$59.99",
+      "rating": 5
+    },
+    {
+      "id": "7",
+      "discount": "",
+      "imgSrc": "images/product01.png",
+      "category": "Nutrition",
+      "productName": "VitaBoost",
+      "currentPrice": "$24.99",
+      "oldPrice": "$29.99",
+      "rating": 4
+    },
+    {
+      "id": "8",
+      "discount": "Sale 40%",
+      "imgSrc": "images/product01.png",
+      "category": "Wellness",
+      "productName": "CalmMind",
+      "currentPrice": "$8.99",
+      "oldPrice": "$12.99",
+      "rating": 3
+    }
+  ]
+}
