@@ -70,11 +70,16 @@ header hr {
 }
 
 header .head-middle {
-  width: 85%;
-  margin: 28px 80px;
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  padding: 12px 110px 12px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #ffffff;
+  z-index: 10000;
+  box-shadow: 0 4px 2px -2px gray;
 }
 
 header .head-middle .logo {

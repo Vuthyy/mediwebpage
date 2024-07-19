@@ -1,14 +1,13 @@
 const productList = document.querySelector(".product-list");
 const cartCountElement = document.querySelector(".cart span");
 
-let cartCount = 0;
+let cartData = JSON.parse(localStorage.getItem("cartData")) || { count: 0 };
+cartCountElement.textContent = cartData.count;
 
 const jsonFile = "http://localhost:3000/products";
 
 fetch(jsonFile)
-  .then((respone) => {
-    return respone.json();
-  })
+  .then((response) => response.json())
   .then((data) => {
     data.map((product) => {
       const {
@@ -23,11 +22,9 @@ fetch(jsonFile)
       } = product;
 
       const starElements = Array.from({ length: 5 }, (_, index) => {
-        if (index < rating) {
-          return '<span><i class="fa-solid fa-star"></i></span>';
-        } else {
-          return '<span><i class="fa-solid fa-star regular"></i></span>';
-        }
+        return index < rating
+          ? '<span><i class="fa-solid fa-star"></i></span>'
+          : '<span><i class="fa-solid fa-star regular"></i></span>';
       }).join("");
 
       const discountLabel = discount
@@ -37,7 +34,7 @@ fetch(jsonFile)
       productList.innerHTML += `
         <div class="product-card" data-product-id="${id}">
             ${discountLabel}
-            <img src="${imgSrc}" alt="" />
+            <img src="${imgSrc}" alt="${productName}" />
             <div class="product-des">
                 <div class="product-info">
                 <p>${category}</p>
@@ -56,12 +53,17 @@ fetch(jsonFile)
     const addToCartButtons = document.querySelectorAll(".add-to-cart");
     addToCartButtons.forEach((button) => {
       button.addEventListener("click", () => {
-        cartCount++;
-        cartCountElement.textContent = cartCount;
+        cartData.count++;
+        cartCountElement.textContent = cartData.count;
+
+        localStorage.setItem("cartData", JSON.stringify(cartData));
 
         if (!button.classList.contains("active")) {
           button.classList.add("active");
         }
       });
     });
+  })
+  .catch((err) => {
+    console.error("Error fetching data:", err);
   });
